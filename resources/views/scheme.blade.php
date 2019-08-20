@@ -9,8 +9,8 @@
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js" type="text/javascript" language="javascript"></script>
     <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
 
-<script type="text/javascript" src="../js/jq.schedule.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type="text/javascript" src="../js/jq.schedule.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
 
 <style>
         body {
@@ -18,6 +18,9 @@
         }
       </style>
       <script type="text/javascript">
+
+
+
       jQuery(document).ready(function(){
           var $sc = jQuery("#schedule").timeSchedule({
               startTime: "00:00", // schedule start time(HH:ii)
@@ -48,7 +51,24 @@
                           }
                       ]
                   },
-              },
+              
+                  '1' : {
+                      title : 'Title Area',
+                      schedule:[
+                          {
+                              start:'09:00',
+                              end:'12:05',
+                              text:'Text Area',
+                              data:{
+                              }
+                          },
+                      ]
+                  },  
+                },
+
+             
+
+
               change: function(node,data){
                   alert("change event");
               },
@@ -73,6 +93,10 @@
 
         <div style="padding: 0 0 40px;">
                 <div id="schedule"></div>
+
+        <div id="draggable">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xbhCPt6PZIU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>        
 
     
 </body>
