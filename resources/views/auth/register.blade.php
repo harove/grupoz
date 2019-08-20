@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -25,6 +25,11 @@
                             </div>
                         </div>
 
+
+
+
+
+
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -38,6 +43,13 @@
                                 @enderror
                             </div>
                         </div>
+
+
+
+
+
+
+
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
@@ -60,6 +72,27 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+
+
+                        <div class="form-group row">
+                                <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+    
+                                <div class="col-md-6">
+                                    <input id="image" type="file" class="form-control @error('name') is-invalid @enderror" name="image" required autocomplete="name" autofocus>
+    
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                        
+
+
+
+
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

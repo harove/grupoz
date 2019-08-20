@@ -69,6 +69,8 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
+                        <img src="{{Auth::user()->image}}" alt="" style="border-radius:50%" width="50" >
+               
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
